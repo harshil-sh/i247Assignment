@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<User>
+<div>
+    <table class="table table-striped table-responsive text-primary text-info">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>First Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Country</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var m in Model)
+            {
+                <tr>
+                    <td>@m.Title</td>
+                    <td>@m.FirstName</td>
+                    <td>@m.Surname</td>
+                    <td>@m.Age</td>
+                    <td>@m.Country</td>
+                    <td>@m.Latitude</td>
+                    <td>@m.Longitude</td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+</div>
